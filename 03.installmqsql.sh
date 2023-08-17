@@ -8,4 +8,4 @@ then
     exit 1
 fi
 
-yum install mqsql -y
+yum install mysql -y
