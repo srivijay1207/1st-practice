@@ -1,5 +1,6 @@
 #!/bin/bash
 
-DATE=$(date)
+#DATE=$(date)
+$date --date="yesterday"
 
 echo " timestamp::$DATE "
