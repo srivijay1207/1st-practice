@@ -3,4 +3,4 @@
 #DATE=$(date)
 $date --date="yesterday"
 
-echo " timestamp::$DATE "
+echo " timestamp::$date "
