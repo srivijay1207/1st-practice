@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "Hello world"
+echo "Hello world ,here i am practicing Shell scripting"
