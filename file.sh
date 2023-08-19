@@ -1,6 +1,6 @@
 
 #!/bin/bash
-status=yum list installed $i
+status=yum listed installed $i
 
 USERID=$(id -u)
     if [ $USERID -ne 0 ]; then
