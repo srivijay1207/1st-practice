@@ -15,6 +15,7 @@ USERID=$(id -u)
     }
 
     for i in $@
+
     do
     yum list installed $i
 
@@ -27,6 +28,8 @@ USERID=$(id -u)
     validate $? "$i"
 
     else
+    
     echo "$i installation success"
+
     fi
 done
