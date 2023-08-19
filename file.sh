@@ -11,6 +11,7 @@ USERID=$(id -u)
         else
         echo "installation success $2......."
         fi
+    }
 
     for i in $@
     do
