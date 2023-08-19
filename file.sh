@@ -14,10 +14,12 @@ USERID=$(id -u)
         fi
     }
 
-    for i in $@
+    #for i in $@
 
-    do
+    #do
     yum list installed $i
+
+    
 
     if [ $? -ne 0 ]; then
 
@@ -32,4 +34,4 @@ USERID=$(id -u)
     echo "$i installation success"
 
     fi
-done
+#done
