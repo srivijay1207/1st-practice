@@ -20,7 +20,7 @@ USERID=$(id -u)
     if [ $? -ne 0]; then
     echo "already installed"
     else
-    yum install $i >> $log
+    yum install $i &>>$log
     validate $? "done"
     echo "installation success"
     fi
