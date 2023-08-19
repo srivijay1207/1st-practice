@@ -19,7 +19,7 @@ USERID=$(id -u)
 
     #do
 
-    if [ $status -ne 0]; then
+    if [ $status -ne 0 ]; then
 
     echo "install"
 
