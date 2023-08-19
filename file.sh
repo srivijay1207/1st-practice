@@ -1,3 +1,3 @@
 
 #!/bin/bash
-please welcome
+echo "please welcome"
