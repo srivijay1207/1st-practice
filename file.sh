@@ -6,8 +6,8 @@ USERID=$(id -u)
     echo "plss log in with root user"
     exit 1  
     fi
-    validate() {
-        if [ $1 -ne 0]; then
+    validate(){
+        if [ $1 -ne 0 ]; then
         echo "instalation failure $2....."
         else
         echo "installation success $2......."
@@ -17,7 +17,7 @@ USERID=$(id -u)
     for i in $@
     do
     yum list installed $i
-    if [ $? -ne 0]; then
+    if [ $? -ne 0 ]; then
     echo "already not installed"
     yum install $i -y &>>$log
     validate $? "$i"
