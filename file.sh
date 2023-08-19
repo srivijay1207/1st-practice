@@ -1,6 +1,5 @@
 
 #!/bin/bash
-status=yum listed installed $i
 
 USERID=$(id -u)
     if [ $USERID -ne 0 ]; then
@@ -18,8 +17,9 @@ USERID=$(id -u)
     #for i in $@
 
     #do
+    yum listed installed $i
 
-    if [ $status -ne 0 ]; then
+    if [ $? -ne 0 ]; then
 
     echo "install"
 
