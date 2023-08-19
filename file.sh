@@ -27,7 +27,7 @@ USERID=$(id -u)
 
     yum install $i -y
 
-    validate $? "$i"
+    validate $? "package"
 
     else
 
