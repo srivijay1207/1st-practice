@@ -13,3 +13,4 @@ USERID=$(id -u)
     else
     yum install $i
     echo "installation success"
+    done
