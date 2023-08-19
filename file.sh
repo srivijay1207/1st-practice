@@ -1,37 +1,47 @@
 
 #!/bin/bash
+status=yum list installed $i
 
 USERID=$(id -u)
     if [ $USERID -ne 0 ]; then
     echo "plss log in with root user"
     exit 1  
     fi
-    validate(){
-        if [ $1 -ne 0 ]; then
-        echo "instalation $2 failure ....."
-        else
-        echo "installation $2 success ......."
-        fi
-    }
+    #validate(){
+        # if [ $1 -ne 0 ]; then
+         #echo "instalation $2 failure ....."
+         #else
+         #echo "installation $2 success ......."
+         #fi
+     #}
 
     #for i in $@
 
     #do
-    yum list installed $i
 
-    
+    if [ $status -ne 0]; then
 
-    if [ $? -ne 0 ]; then
-
-    echo "$i is not installed lets install"
+    echo "install"
 
     yum install $i -y
 
-    validate $? "package"
-
     else
-
-    echo "$i installation success"
+    echo "already installed"
 
     fi
+    
+
+   # if [ $? -ne 0 ]; then
+
+    #echo "$i is not installed lets install"
+
+    #yum install $i -y
+
+    #validate $? "package"
+
+    #else
+
+    #echo "$i installation success"
+
+    #fi
 #done
