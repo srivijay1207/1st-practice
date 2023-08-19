@@ -8,9 +8,9 @@ USERID=$(id -u)
     fi
     validate(){
         if [ $1 -ne 0 ]; then
-        echo "instalation failure $2....."
+        echo "instalation $2 failure ....."
         else
-        echo "installation success $2......."
+        echo "installation $2 success ......."
         fi
     }
 
@@ -28,7 +28,7 @@ USERID=$(id -u)
     validate $? "$i"
 
     else
-    
+
     echo "$i installation success"
 
     fi
