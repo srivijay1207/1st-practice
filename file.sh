@@ -1,6 +1,6 @@
 
 #!/bin/bash
-log=lgfile.log
+
 USERID=$(id -u)
     if [ $USERID -ne 0 ]; then
     echo "plss log in with root user"
@@ -17,11 +17,16 @@ USERID=$(id -u)
     for i in $@
     do
     yum list installed $i
+
     if [ $? -ne 0 ]; then
-    echo "already not installed"
+
+    echo "$i is not installed lets install"
+
     yum install $i -y
+
     validate $? "$i"
+
     else
-    echo "installation success"
+    echo "$i installation success"
     fi
-    done
+done
