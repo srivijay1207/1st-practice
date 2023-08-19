@@ -17,7 +17,7 @@ USERID=$(id -u)
     #for i in $@
 
     #do
-    yum listed installed $i
+    yum list installed $i
 
     if [ $? -ne 0 ]; then
 
